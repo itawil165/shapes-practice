@@ -5,7 +5,7 @@
  * LASTLY, COMPLETE TestShapes class
  */
 
-//implement Shape interface and provide abstract method implementation
+// Implement Shape interface and provide abstract method implementation
 public class Rectangle {
 
     /*
@@ -13,10 +13,25 @@ public class Rectangle {
     Instance variables must be encapsulated
     double width
     double height
-     */
+    */
+    private double width;
+    private double height;
 
+    public double getWidth() {
+        return width;
+    }
 
+    public void setWidth(double width) {
+        this.width = width;
+    }
 
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
 
     /*
     Override area and perimeter methods here
@@ -25,8 +40,21 @@ public class Rectangle {
     Perimeter of a rectangle can be found as => 2 * (width + height)
     */
 
+    public double area() {
+        return width * height;
+    }
+
+    public double perimeter() {
+        return 2 * (width + height);
+    }
 
 
-    //Override toString() method here
-
+    // Override toString() method here
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "width=" + width +
+                ", height=" + height +
+                '}';
+    }
 }

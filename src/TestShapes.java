@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /**
  *
  * FIRST, COMPLETE Shape interface
@@ -41,6 +39,33 @@ public class TestShapes {
          Circle has the largest area as 50.24
          */
 
+        Circle circle = new Circle();
+        Rectangle rectangle = new Rectangle();
+        Square square = new Square();
+
+        // CIRCLE INFO
+        circle.setRadius(4);
+        System.out.println(circle);
+        System.out.println("Area of the Circle is = " + circle.area());
+        System.out.println("Perimeter of the Circle is = " + circle.perimeter() + "\n");
+
+        // RECTANGLE INFO
+        rectangle.setWidth(5.5);
+        rectangle.setHeight(6);
+        System.out.println(rectangle);
+        System.out.println("Area of the Rectangle is = " + rectangle.area());
+        System.out.println("Perimeter of the Rectangle is = " + rectangle.perimeter() + "\n");
+
+        // SQUARE INFO
+        square.setSide(2.5);
+        System.out.println(square);
+        System.out.println("Area of the Square is = " + square.area());
+        System.out.println("Perimeter of the Square is = " + square.perimeter() + "\n");
+
+        // SHAPE WITH THE LARGEST AREA
+        double largestArea = Math.max(Math.max(circle.area(), rectangle.area()), square.area());
+
+        System.out.println("The shape with the largest area is the Circle: " + largestArea);
 
     }
 }
